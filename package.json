@@ -1,0 +1,6 @@
+{
+  "name": "tkroginal",
+  "bin": {
+    "tkoriginal": "index.js"
+  }
+}
