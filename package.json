@@ -13,5 +13,13 @@
     "Tauqueer",
     "Khan",
     "tkoriginal"
-  ]
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "tkoriginal/tkoriginal",
+  "author": {
+    "name": "Tauqueer Khan",
+    "email": "tkoriginale@gmail.com",
+    "url": "https://twitter.com/tkroginale"
+  }
 }
