@@ -1,7 +1,11 @@
 {
   "name": "tkoriginal",
   "version": "1.0.1",
+  "description": "Get to know Tauqueer via `npx tkoriginal`",
   "bin": {
     "tkoriginal": "index.js"
+  },
+  "dependencies": {
+    "cli-welcome": "^2.2.2"
   }
 }

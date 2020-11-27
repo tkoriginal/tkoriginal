@@ -1,8 +1,18 @@
 #! /usr/bin/env node
 
-process.stdout.write(
-  process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H'
-)
+const { name, version, description } = require('./package.json')
+const welcome = require('cli-welcome')
+
+welcome({
+  title: name,
+  tagLine: `Hi, nice to meet you!`,
+  version,
+  description,
+  bgColor: `#FADC00`,
+  color: `#000000`,
+  bold: true,
+  clear: true
+})
 console.log(`
 Tauqueer Khan - Software Engineer
 
