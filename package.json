@@ -1,6 +1,6 @@
 {
   "name": "tkoriginal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get to know Tauqueer via `npx tkoriginal`",
   "bin": {
     "tkoriginal": "index.js"
