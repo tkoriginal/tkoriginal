@@ -1,13 +1,24 @@
 #! /usr/bin/env node
 
-const { name, version, description } = require('./package.json')
 const welcome = require('cli-welcome')
 const chalk = require('chalk')
+const symbol = require('log-symbols')
+
+const { name, version, description } = require('./package.json')
+const init = require('./utils/init')
+
+init()
 
 const brandColor = (color, inverse) => (inverse ? chalk.hex(color).inverse.bold : chalk.bgHex(color).bold)
 const twitterColor = brandColor('#1da1f2')
 const githubColor = brandColor('#6cc644', true)
 const portfolioColor = brandColor('#6e5494')
+
+// Alerts
+const success = chalk.green.inverse
+const info = chalk.blue.inverse
+const warning = chalk.keyword('orange').inverse
+const error = chalk.red.bold.inverse
 
 welcome({
   title: `Tauqueer Khan`,
