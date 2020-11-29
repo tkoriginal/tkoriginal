@@ -4,33 +4,32 @@ const welcome = require('cli-welcome')
 const chalk = require('chalk')
 const symbol = require('log-symbols')
 
-const { name, version, description } = require('./package.json')
+const { version, description } = require('./package.json')
 const init = require('./utils/init')
-
-init()
 
 const brandColor = (color, inverse) => (inverse ? chalk.hex(color).inverse.bold : chalk.bgHex(color).bold)
 const twitterColor = brandColor('#1da1f2')
 const githubColor = brandColor('#6cc644', true)
 const portfolioColor = brandColor('#6e5494')
 
-// Alerts
-const success = chalk.green.inverse
-const info = chalk.blue.inverse
-const warning = chalk.keyword('orange').inverse
-const error = chalk.red.bold.inverse
-
-welcome({
-  title: `Tauqueer Khan`,
-  tagLine: `Hi, nice to meet you!`,
-  version,
-  description,
-  bgColor: `#FADC00`,
-  color: `#000000`,
-  bold: true,
-  clear: true
-})
-console.log(`Bio: ${chalk.italic(`
+const run = () => {
+  // Alerts
+  const success = chalk.green.inverse
+  const info = chalk.blue.inverse
+  const warning = chalk.keyword('orange').inverse
+  const error = chalk.red.bold.inverse
+  init()
+  welcome({
+    title: `Tauqueer Khan`,
+    tagLine: `Hi, nice to meet you!`,
+    version,
+    description,
+    bgColor: `#FADC00`,
+    color: `#000000`,
+    bold: true,
+    clear: true
+  })
+  console.log(`Bio: ${chalk.italic(`
   Software Engineer with experience building applications using web technologies.
   Built production applications with
     🖥  Electron/React for Desktop
@@ -45,3 +44,6 @@ ${githubColor(' Github ')} ${chalk.dim('https://www.github.com/tkoriginal')}
 ${twitterColor(' Twitter ')} ${chalk.dim('https://www.twitter.com/tkoriginale')}
 ${portfolioColor(' Portfolio ')} ${chalk.dim('https://www.tkhan.ca (not up yet)')}
 `)
+}
+
+run()
